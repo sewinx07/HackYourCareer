@@ -1,0 +1,273 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    /**background-color: #f4f4f9;**/
+}
+header {
+    /**background: #353535;**/
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav {
+    /**background: #555;**/
+    color: #fff;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* start button style*/ 
+button,button::after {
+	padding: 10px 50px;
+	font-size: 20px;
+	border: none;
+	border-radius: 5px;
+	color: rgb(255, 255, 255);
+	background-color: transparent;
+	position: relative;
+  }
+  
+  button::after {
+	--move1: inset(50% 50% 50% 50%);
+	--move2: inset(31% 0 40% 0);
+	--move3: inset(39% 0 15% 0);
+	--move4: inset(45% 0 40% 0);
+	--move5: inset(45% 0 6% 0);
+	--move6: inset(14% 0 61% 0);
+	clip-path: var(--move1);
+	content: 'GLITCH';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+  }
+  
+  button:hover::after {
+	animation: glitch_4011 1s;
+	text-shadow: 10 10px 10px black;
+	animation-timing-function: steps(2, end);
+	text-shadow: -3px -3px 0px #331182, 3px 3px 0px #eb1717;
+	background-color: transparent;
+	border: 3px solid rgb(255, 255, 255);
+  }
+  
+  button:hover {
+	text-shadow: -1px -1px 0px #ffffff, 1px 1px 0px #ff0000;
+  }
+  
+  button:hover {
+	background-color: transparent;
+	border: 1px solid rgb(0, 255, 213);
+	box-shadow: 0px 10px 10px -10px rgb(0, 255, 213);
+  }
+  
+  @keyframes glitch_4011 {
+	0% {
+	  clip-path: var(--move1);
+	  transform: translate(0px,-10px);
+	}
+  
+	10% {
+	  clip-path: var(--move2);
+	  transform: translate(-10px,10px);
+	}
+  
+	20% {
+	  clip-path: var(--move3);
+	  transform: translate(10px,0px);
+	}
+  
+	30% {
+	  clip-path: var(--move4);
+	  transform: translate(-10px,10px);
+	}
+  
+	40% {
+	  clip-path: var(--move5);
+	  transform: translate(10px,-10px);
+	}
+  
+	50% {
+	  clip-path: var(--move6);
+	  transform: translate(-10px,10px);
+	}
+  
+	60% {
+	  clip-path: var(--move1);
+	  transform: translate(10px,-10px);
+	}
+  
+	70% {
+	  clip-path: var(--move3);
+	  transform: translate(-10px,10px);
+	}
+  
+	80% {
+	  clip-path: var(--move2);
+	  transform: translate(10px,-10px);
+	}
+  
+	90% {
+	  clip-path: var(--move4);
+	  transform: translate(-10px,10px);
+	}
+  
+	100% {
+	  clip-path: var(--move1);
+	  transform: translate(0);
+	}
+  }
+  
+  /* end button style*/ 
+  
+  .center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+  }
+
+  /*slideshow start*/
+  * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*slideshow end*/
+
+section {
+    padding: 20px;
+}
+.event-details, .registration-form {
+    margin-bottom: 20px;
+}
+.event-details h2, .registration-form h2 {
+    color: #333;
+}
+.event-details p, .registration-form p {
+    color: #666;
+}
+
+
+
+body,html{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+
+body{
+	
+	place-items: center;
+	/**position: relative;**/
+	background: radial-gradient(110% 140% at 100% 5%, navy 0, black 100%);
+}
+
+
+/*
+ *
+ *
+ *
+ *
+ SPACE BACKGROUND !!!! */
+ 
+ .space{	 
+	background: rgba(128, 0, 128, 0) center / 200px 200px round;
+	position:absolute;
+	transform-origin: center;
+	opacity: .6;
+	width: 100%;
+	height: 100%;
+  }
+  
+  .stars1 {
+	animation: space 15s ease infinite 1s;
+	background-image:radial-gradient(1px 1px at 25px 5px,red,rgba(255, 255, 255, 0)),radial-gradient(1px 1px at 50px 25px,green,rgba(255, 255, 255, 0)),radial-gradient(1px 1px at 125px 20px,red,rgba(255, 255, 255, 0)),radial-gradient(1.5px 1.5px at 50px 75px,white,rgba(255, 255, 255, 0)),radial-gradient(2px 2px at 15px 125px,white,rgba(255, 255, 255, 0)),radial-gradient(2.5px 2.5px at 110px 80px,goldenrod,rgba(255, 255, 255, 0));
+  }
+  .stars2 {
+	animation: space 25s linear infinite;
+	background-image:radial-gradient(1px 1px at 75px 125px,white,rgba(255, 255, 255, 0)),radial-gradient(1px 1px at 100px 75px,aliceblue,rgba(255, 255, 255, 0)),radial-gradient(1.5px 1.5px at 199px 100px,yellow,rgba(255, 255, 255, 0)),
+	  radial-gradient(2px 2px at 20px 50px,white,rgba(255, 255, 255, 0)),radial-gradient(2.5px 2.5px at 100px 5px,white,rgba(255, 255, 255, 0)),radial-gradient(2.5px 2.5px at 5px 5px,white,rgba(255, 255, 255, 0));}
+  .stars3 {
+	animation: space 35s linear infinite;
+	background-image:radial-gradient(1px 1px at 10px 10px,yellow,rgba(255, 255, 255, 0)),radial-gradient(1px 1px at 150px 150px,white,rgba(255, 255, 255, 0)),radial-gradient(1.5px 1.5px at 60px 170px,yellow,rgba(255, 255, 255, 0)),radial-gradient(1.5px 1.5px at 175px 180px,white,rgba(255, 255, 255, 0)),radial-gradient(2px 2px at 195px 95px,white,rgba(255, 255, 255, 0)),radial-gradient(2.5px 2.5px at 95px 145px,yellow,rgba(255, 255, 255, 0));
+  }
+  @keyframes space {
+	40% {
+	  opacity: 0.75;
+	}
+	50% {
+	  opacity: 0.25;
+	}
+	60% {
+	  opacity: 1;
+	}
+	100% {
+	  transform: rotate(360deg) translate(-10%, -10%);
+	}
+  }
+  
+  /* END OF SPACE BACKGROUND*/
+  /********************************/
+  
