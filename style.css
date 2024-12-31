@@ -25,6 +25,11 @@ nav a {
     font-size: 1.1rem;
 }
 
+p{
+	font-size: 1.2rem;
+	color: #ffffff;
+}
+
 /* start button style*/ 
 button,button::after {
 	padding: 10px 50px;
@@ -138,80 +143,238 @@ button,button::after {
 	width: 50%;
   }
 
-  /*slideshow start*/
-  * {box-sizing:border-box}
+/*slideshow start*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
+* {
+  margin: 0;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1536px;
+  margin-inline: auto;
   position: relative;
-  margin: auto;
+  height: 100px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  text-align: center;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
 }
 
-/* Hide the images by default */
-.mySlides {
-  display: none;
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
 }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
+.item {
+  width: 200px;
+  height: 155px;
+  /**background-color: red;**/
+  vertical-align: middle;
+  display: inline-block;
   position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+  margin-top: -1.5rem;
+  left: max(calc(200px * 8), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.item1 {
+  animation-delay: calc(30s / 8 * (8 - 1) * -1);
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.item2 {
+  animation-delay: calc(30s / 8 * (8 - 2) * -1);
 }
 
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+.item3 {
+  animation-delay: calc(30s / 8 * (8 - 3) * -1);
 }
 
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+.item4 {
+  animation-delay: calc(30s / 8 * (8 - 4) * -1);
 }
 
+.item5 {
+  animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+
+.item6 {
+  animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+
+.item7 {
+  animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+
+.item8 {
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
 /*slideshow end*/
 
+
+
+
+
+
+/*slideshow spiekers start*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+.wrappers {
+  width: 90%;
+  max-width: 1536px;
+  margin-inline: auto;
+  position: relative;
+  height: 300px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  text-align: center;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
+
+.items {
+  width: 200px;
+  height: 300px;
+  background-color: red;
+  vertical-align: middle;
+  display: inline-block;
+  position: absolute;
+  margin-top: -1.5rem;
+  left: max(calc(200px * 8), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.items1 {
+  animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+
+.items2 {
+  animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+
+.items3 {
+  animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+
+.items4 {
+  animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+
+.items5 {
+  animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+
+.items6 {
+  animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+
+.items7 {
+  animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+
+.items8 {
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+/*slideshow spiekers end*/
+
+
+
+/* start of registration details */
+
+
+.wrapper2 {
+	width: 90%;
+	max-width: 1536px;
+	margin-inline: auto;
+	position: relative;
+	height: 300px;
+	margin-top: 0.5rem;
+	overflow: hidden;
+	text-align: center;
+	mask-image: linear-gradient(
+	  to right,
+	  rgba(0, 0, 0, 0),
+	  rgba(0, 0, 0, 1) 20%,
+	  rgba(0, 0, 0, 1) 80%,
+	  rgba(0, 0, 0, 0)
+	);
+  }
+
+
+
+  .reg {
+	width: 200px;
+	height: 300px;
+	background-color: red;
+	vertical-align: middle;
+	display: inline-block;
+	position: absolute;
+	margin-top: -1.5rem;
+  }
+
+/* end of registration details */
+
+/* start of event details */
 section {
     padding: 20px;
+	text-align: center;
 }
 .event-details, .registration-form {
     margin-bottom: 20px;
 }
 .event-details h2, .registration-form h2 {
-    color: #333;
+    color: #ffffff;
+	
 }
 .event-details p, .registration-form p {
-    color: #666;
+    color: #ffffff;
 }
+
+
+/* end of event details */
+
 
 
 
 body,html{
-	height: 100%;
-	width: 100%;
+	
 	margin: 0;
 	padding: 0;
 }
@@ -220,7 +383,7 @@ body,html{
 body{
 	
 	place-items: center;
-	/**position: relative;**/
+	position: relative;
 	background: radial-gradient(110% 140% at 100% 5%, navy 0, black 100%);
 }
 
@@ -271,3 +434,25 @@ body{
   /* END OF SPACE BACKGROUND*/
   /********************************/
   
+
+
+  footer {
+	background: #ffffff19;
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+	/**position: fixed;**/
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	  }
+  
+.fot{
+	background: #ffffff1d;
+	color: #ffffff;
+	text-align: center;
+	padding: 1rem;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
