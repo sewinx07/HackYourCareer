@@ -651,9 +651,9 @@ section {
 .black-friday-component {
   --count: 0;
   --days: 15;
-  --hours: 24;
-  --minutes: 60;
-  --seconds: 60;
+  --hours: 18;
+  --minutes: 16;
+  --seconds: 20;
   flex-direction: column;
   display: flex;
   justify-content: space-between;
