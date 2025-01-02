@@ -1,10 +1,22 @@
 body {
+	
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+	  place-items: center;
+	
+	background: radial-gradient(110% 140% at 100% 5%, navy 0, black 100%);
     /**background-color: #f4f4f9;**/
 }
+
+body,html{
+	
+	margin: 0;
+	padding: 0;
+}
+
+
 header {
     /**background: #353535;**/
     color: #fff;
@@ -30,8 +42,8 @@ p{
 	color: #ffffff;
 }
 
-/* start button style*/ 
-button,button::after {
+/** start button style **/
+button1,button1::after {
 	padding: 10px 50px;
 	font-size: 20px;
 	border: none;
@@ -41,7 +53,7 @@ button,button::after {
 	position: relative;
   }
   
-  button::after {
+  button1::after {
 	--move1: inset(50% 50% 50% 50%);
 	--move2: inset(31% 0 40% 0);
 	--move3: inset(39% 0 15% 0);
@@ -58,7 +70,7 @@ button,button::after {
 	display: block;
   }
   
-  button:hover::after {
+  button1:hover::after {
 	animation: glitch_4011 1s;
 	text-shadow: 10 10px 10px black;
 	animation-timing-function: steps(2, end);
@@ -67,11 +79,11 @@ button,button::after {
 	border: 3px solid rgb(255, 255, 255);
   }
   
-  button:hover {
+  button1:hover {
 	text-shadow: -1px -1px 0px #ffffff, 1px 1px 0px #ff0000;
   }
   
-  button:hover {
+  button1:hover {
 	background-color: transparent;
 	border: 1px solid rgb(0, 255, 213);
 	box-shadow: 0px 10px 10px -10px rgb(0, 255, 213);
@@ -134,7 +146,7 @@ button,button::after {
 	}
   }
   
-  /* end button style*/ 
+   /**end button style**/ 
   
   .center {
 	display: block;
@@ -227,7 +239,12 @@ button,button::after {
 /*slideshow end*/
 
 
-
+a {
+  margin-inline: auto;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+}
 
 
 
@@ -247,7 +264,7 @@ button,button::after {
   max-width: 1536px;
   margin-inline: auto;
   position: relative;
-  height: 300px;
+  height: 350px;
   margin-top: 0.5rem;
   overflow: hidden;
   text-align: center;
@@ -269,11 +286,11 @@ button,button::after {
 .items {
   width: 200px;
   height: 300px;
-  background-color: red;
+  /**background-color: red;**/
   vertical-align: middle;
   display: inline-block;
   position: absolute;
-  margin-top: -1.5rem;
+  /**margin-top: -1.5rem;**/
   left: max(calc(200px * 8), 100%);
   animation-name: scrollLeft;
   animation-duration: 30s;
@@ -325,7 +342,7 @@ button,button::after {
 	margin-inline: auto;
 	position: relative;
 	height: 300px;
-	margin-top: 0.5rem;
+	/**margin-top: 0.5rem;**/
 	overflow: hidden;
 	text-align: center;
 	mask-image: linear-gradient(
@@ -339,11 +356,21 @@ button,button::after {
 
 
 
-  .reg {
+  .reg1 {
 	width: 200px;
 	height: 300px;
 	background-color: red;
-	vertical-align: middle;
+	vertical-align: right;
+	display: inline-block;
+	position: absolute;
+	margin-top: -1.5rem;
+  }
+
+  .reg2 {
+	width: 200px;
+	height: 300px;
+	background-color: red;
+	vertical-align: left;
 	display: inline-block;
 	position: absolute;
 	margin-top: -1.5rem;
@@ -373,19 +400,8 @@ section {
 
 
 
-body,html{
-	
-	margin: 0;
-	padding: 0;
-}
 
 
-body{
-	
-	place-items: center;
-	position: relative;
-	background: radial-gradient(110% 140% at 100% 5%, navy 0, black 100%);
-}
 
 
 /*
@@ -454,5 +470,296 @@ body{
 	padding: 1rem;
 	left: 0;
 	bottom: 0;
-	width: 100%;
+	width: 30%;
+	border-radius: 25px;
+}
+
+
+
+
+
+
+  :root {
+    --card-height: 300px;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+*{
+    box-sizing: border-box;
+}
+
+.card {
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 36px;
+    perspective: 2500px;
+    margin: 0 50px;
+    border-radius: 5px;
+  }
+.cover-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.wrapperc{
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    border-radius: 5px;
+}
+.card:hover .wrapperc{
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow:2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow:2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+}
+.wrapperc::before,
+.wrapperc::after{
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+    border-radius: 5px;
+}
+.wrapperc::before{
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(
+        to top,
+        transparent 46%,
+        rgba(12, 13, 19, 0.5)68%,
+        rgba(12, 13, 19) 97%
+    );
+    border-radius: 5px;
+}
+.wrapperc::after{
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 46%,
+        rgba(12, 13, 19, 0.5) 68%,
+        rgba(12, 13, 19)97%
+    );
+    border-radius: 5px;
+}
+.card:hover .wrapperc::before,
+.wrapperc::after{
+    opacity: 1;
+}
+.card:hover .wrapperc::after{
+    height: 120px;
+}
+.title {
+    width: 100%;
+    transition: transform 0.5s;
+}
+.card:hover .title {
+    transform: translate3d(0%, -50px, 100px);
+}
+  .character {
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+  }
+  .card:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
+  }
+  
+
+
+ 
+.parent {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.child {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: all 0.3s cubic-bezier(0.68, 0.85, 0.265, 1.85);
+  border-radius: 5px;
+  margin: 0 5px;
+  box-shadow:
+    inset 1px 1px 2px #fff,
+    0 0 5px #4442;
+}
+
+.child:hover {
+  background-color: white;
+  background-position:
+    -100px 100px,
+    -100px 100px;
+  /*transform: rotate3d(0.5, 1, 0, 30deg);*/
+  transform: perspective(180px) rotateX(60deg) translateY(2px);
+}
+
+.child-1:hover {
+  box-shadow: 0px 10px 10px #1e90ff;
+}
+.child-2:hover {
+  box-shadow: 0px 10px 10px #ff00ff;
+}
+.child-3:hover {
+  box-shadow: 0px 10px 10px #000;
+}
+.child-4:hover {
+  box-shadow: 0px 10px 10px #4267b2;
+}
+
+.button {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.68, -0.85, 0.265, 1.55);
+}
+
+.child:hover > .button {
+  transform: translate3d(0px, 20px, 30px) perspective(80px) rotateX(-60deg)
+    translateY(2px) translateZ(10px);
+}
+
+
+
+
+
+/**timer countdown**/
+
+/* From Uiverse.io by 3bdel3ziz-T */ 
+.black-friday-component {
+  --count: 0;
+  --days: 15;
+  --hours: 24;
+  --minutes: 60;
+  --seconds: 60;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  padding: 0 40px;
+}
+
+.black-friday-component .timer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0rem;
+  overflow: hidden;
+  width: calc(244px + 0rem);
+  text-align: center;
+}
+.black-friday-component .timer .colon {
+  width: 8px;
+  color: #fff;
+  font-size: 2rem;
+}
+.black-friday-component .timer .itemx {
+  text-align: center;
+  width: 55px;
+  height: fit-content;
+}
+.black-friday-component .timer .itemx .days,
+.black-friday-component .timer .itemx .hours,
+.black-friday-component .timer .itemx .minutes,
+.black-friday-component .timer .itemx .seconds {
+  text-align: center;
+  width: 55px;
+  overflow: hidden;
+  height: 40px;
+}
+.black-friday-component .timer .itemx .day,
+.black-friday-component .timer .itemx .hour,
+.black-friday-component .timer .itemx .min,
+.black-friday-component .timer .itemx .sec {
+  text-align: center;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.black-friday-component .timer .itemx .day span,
+.black-friday-component .timer .itemx .hour span,
+.black-friday-component .timer .itemx .min span,
+.black-friday-component .timer .itemx .sec span {
+  height: 40px;
+  color: #fff;
+  font-size: 2rem;
+  display: inline-block;
+}
+.black-friday-component .timer .itemx .day {
+  --count: var(--days);
+  animation: slide calc(var(--count) * 86400s) ease-out 0s 31 normal both;
+}
+.black-friday-component .timer .itemx .hour {
+  --count: var(--hours);
+  animation: slide calc(var(--count) * 3600s) steps(var(--count)) 0s 24 normal
+    both;
+}
+.black-friday-component .timer .itemx .min {
+  --count: var(--minutes);
+  animation: slide calc(var(--count) * 60s) steps(var(--count)) 0s 60 normal
+    both;
+}
+.black-friday-component .timer .itemx .sec {
+  --count: var(--seconds);
+  animation: slide calc(var(--count) * 1s) steps(var(--count)) 0s 60 normal both;
+}
+.black-friday-component .timer .itemx p {
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(calc(-40px * var(--count)));
+  }
+  99.6% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-40px * var(--count)));
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+    scale: 1;
+  }
+  50% {
+    transform: translateY(-10px);
+    scale: 1.1;
+  }
+  100% {
+    transform: translateY(0);
+    scale: 1;
+  }
 }
