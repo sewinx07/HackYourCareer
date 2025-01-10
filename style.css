@@ -291,7 +291,7 @@ a {
   display: inline-block;
   position: absolute;
   /**margin-top: -1.5rem;**/
-  left: max(calc(200px * 8), 100%);
+  left: max(calc(200px * 3), 100%);
   animation-name: scrollLeft;
   animation-duration: 30s;
   animation-timing-function: linear;
@@ -299,35 +299,35 @@ a {
 }
 
 .items1 {
-  animation-delay: calc(30s / 8 * (8 - 1) * -1);
+  animation-delay: calc(30s / 3 * (3 - 1) * -1);
 }
 
 .items2 {
-  animation-delay: calc(30s / 8 * (8 - 2) * -1);
+  animation-delay: calc(30s / 3 * (3 - 2) * -1);
 }
 
 .items3 {
-  animation-delay: calc(30s / 8 * (8 - 3) * -1);
+  animation-delay: calc(30s / 3 * (3 - 3) * -1);
 }
 
 .items4 {
-  animation-delay: calc(30s / 8 * (8 - 4) * -1);
+  animation-delay: calc(30s / 3 * (3 - 4) * -1);
 }
 
 .items5 {
-  animation-delay: calc(30s / 8 * (8 - 5) * -1);
+  animation-delay: calc(30s / 3 * (3 - 5) * -1);
 }
 
 .items6 {
-  animation-delay: calc(30s / 8 * (8 - 6) * -1);
+  animation-delay: calc(30s / 3 * (3 - 6) * -1);
 }
 
 .items7 {
-  animation-delay: calc(30s / 8 * (8 - 7) * -1);
+  animation-delay: calc(30s / 3 * (3 - 7) * -1);
 }
 
 .items8 {
-  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+  animation-delay: calc(30s / 3 * (3 - 3) * -1);
 }
 /*slideshow spiekers end*/
 
