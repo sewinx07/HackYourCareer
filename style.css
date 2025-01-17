@@ -307,7 +307,7 @@ a {
 }
 
 .items3 {
-  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+  animation-delay: calc(30s / 8 * (8 - 3) * -1);
 }
 
 .items4 {
