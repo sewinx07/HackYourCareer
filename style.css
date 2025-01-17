@@ -299,7 +299,7 @@ a {
 }
 
 .items1 {
-  animation-delay: calc(30s / 8 * (9 - 1) * -1);
+  animation-delay: calc(30s / 8 * (8 - 1) * -1);
 }
 
 .items2 {
