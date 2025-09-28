@@ -50,7 +50,7 @@ button1,button1::after {
 	border-radius: 5px;
 	color: rgb(255, 255, 255);
 	background-color: transparent;
-	position: relative;
+	position: center;
   }
   
   button1::after {
@@ -763,3 +763,4 @@ section {
     scale: 1;
   }
 }
+
